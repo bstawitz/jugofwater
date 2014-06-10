@@ -17,12 +17,3 @@ test:
   database: db/test.sqlite3
   pool: 5
   timeout: 5000
-
-production:
-  adapter: postgresql
-  encoding: utf-8
-  host: localhost
-  database: dothedue_production
-  pool: 5
-  adapter: postgresql
-  host: localhost
