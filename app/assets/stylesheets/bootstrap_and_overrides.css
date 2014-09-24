@@ -7,3 +7,18 @@
   */
 
 body { padding-top: 60px; }
+
+textarea, .uneditable-input {
+  width: 75%;
+}
+
+textarea#brainstorm_description {
+  border: none;
+}
+input#brainstorm_title {
+  border: none;
+  border-bottom: 1px dashed black;
+  line-height: 40px;
+  font-size:30px;
+  height:40px;
+}

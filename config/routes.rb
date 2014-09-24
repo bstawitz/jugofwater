@@ -1,4 +1,7 @@
 Dothedue::Application.routes.draw do
+  resources :brainstorms
+
+
   resources :items
 
 
