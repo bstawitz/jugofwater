@@ -1,0 +1,25 @@
+<%= form_for @brainstorm, :html => { :class => 'form-horizontal' } do |f| %>
+<div class="span7">
+  <div class="control-group">
+    <div class="controls">
+      <%= f.text_field :title, :class => 'form_control', :placeholder => "Title" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls input-block-level input-xxlarge">
+      <%= f.text_area :description, :size => "80x20", :placeholder => "Lets your thoughts flow..." %>
+    </div>
+  </div>
+</div>
+
+<div class="span2">
+    <a href="javascript:void(0)" class="form-submit" onclick="$(this).closest('form').submit();">
+      <i class="glyphicon glyphicon-ok" style="font-size:36px;"></i>
+    </a>
+    <br>
+    <a href="<%= brainstorms_path %>">
+      <i class="glyphicon glyphicon-remove" style="font-size:36px;"></i>
+    </a>
+
+</div>
+<% end %>
