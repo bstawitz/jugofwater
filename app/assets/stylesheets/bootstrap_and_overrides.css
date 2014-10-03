@@ -6,7 +6,7 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
-body { padding-top: 60px; }
+body { padding-top: 20px; }
 
 textarea, .uneditable-input {
   width: 75%;
@@ -21,4 +21,8 @@ input#brainstorm_title {
   line-height: 40px;
   font-size:30px;
   height:40px;
+}
+
+.navbar .nav {
+  float: right;
 }

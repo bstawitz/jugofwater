@@ -19,24 +19,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </a>
-        <%= link_to "Do the Due", root_path, :class => "brand" %>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li><%= link_to "Brainstorms", brainstorms_path %></li>
-            <li><%= link_to "To do Items", items_path %></li>
-            <li><%= link_to "Calendar" %></li>
-            <li><%= link_to "Settings" %></li>
-          </ul>
-        </div>
-      </div>
+      </button>
+      <a class="navbar-brand" href="#">Jug of Water</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="<%= brainstorms_path %>">
+            <i class="glyphicon glyphicon-plus-sign" style="font-size:36px;"></i>
+          </a> 
+        </li>
+        <li>
+          <a href="<%= items_path %>">
+            <i class="glyphicon glyphicon-tasks" style="font-size:36px;"></i>
+          </a> 
+        </li>
+        <li>
+          <a href="#">
+            <i class="glyphicon glyphicon-list" style="font-size:36px;"></i>
+          </a> 
+        </li>
+        <li>
+          <a href="#">
+            <i class="glyphicon glyphicon-calendar" style="font-size:36px;"></i>
+          </a> 
+        </li>
+        <li>
+          <a href="#">
+            <i class="glyphicon glyphicon-cog" style="font-size:36px;"></i>
+          </a> 
+        </li>
+        <li>
+          <a href="#">
+            <i class="glyphicon glyphicon-off" style="font-size:36px;"></i>
+          </a> 
+        </li>
+      </ul>
     </div>
   </div>
 
