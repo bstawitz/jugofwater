@@ -3,24 +3,25 @@
 <%- model_class = Brainstorm -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %> <%= link_to "", new_brainstorm_path, :class => 'glyphicon glyphicon-plus' %></h1>
-  
 </div>
 <% @brainstorms.each do |brainstorm| %>
-<div class="row">
-  <div class="col-xs-15 col-sm-8 col-md-9"><h4><%= link_to brainstorm.title, brainstorm_path(brainstorm) %></h4></div>
-  <div class="col-xs-2 col-md-2 text-right">
-    <h4><small><%= brainstorm.created_at.to_formatted_s(:short) %></small></h4>                      
+<div style="margin: 10px 0px;">
+  <div class="row">
+    <div class="col-xs-15 col-sm-8 col-md-9"><h4><%= link_to brainstorm.title, brainstorm_path(brainstorm) %></h4></div>
+    <div class="col-xs-2 col-md-2 text-right">
+      <h4><small><%= brainstorm.created_at.to_formatted_s(:short) %></small></h4>                      
+    </div>
+    <div class="col-xs-1 col-md-1 text-right">
+      <h5>
+        <%= link_to "", edit_brainstorm_path(brainstorm), :class => 'glyphicon glyphicon-pencil' %>
+        <%= link_to "", brainstorm_path(brainstorm), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'glyphicon glyphicon-trash' %>
+      </h5>
+    </div>
   </div>
-  <div class="col-xs-1 col-md-1 text-right">
-    <h5>
-      <%= link_to "", edit_brainstorm_path(brainstorm), :class => 'glyphicon glyphicon-pencil' %>
-      <%= link_to "", brainstorm_path(brainstorm), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'glyphicon glyphicon-trash' %>
-    </h5>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-18 col-sm-8 col-md-12">
-    <%= truncate(brainstorm.description, length: 200) %>
+  <div class="row">
+    <div class="col-xs-18 col-sm-8 col-md-12">
+      <%= truncate(brainstorm.description, length: 300) %>
+    </div>
   </div>
 </div>
 <% end %>
