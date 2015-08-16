@@ -42,14 +42,5 @@
         	easing: 'easeOutCubic'
         });
 	});
-	
-
-
-$(function(){	
-
-	
-
-
-});
 
 

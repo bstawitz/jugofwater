@@ -1,4 +1,7 @@
-Dothedue::Application.routes.draw do
+JugOfWater::Application.routes.draw do
+  resources :categories
+
+
   get "static_pages/index"
 
   resources :brainstorms

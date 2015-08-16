@@ -1,25 +1,71 @@
-<%= form_for @brainstorm, :html => { :class => 'form-horizontal' } do |f| %>
-<div class="span9">
-  <div class="control-group">
-    <div class="controls">
-      <%= f.text_field :title, :class => 'form_control', :placeholder => "Title" %>
-    </div>
+<div class="row">
+  <div class="col-md-1">
   </div>
-  <div class="control-group">
-    <div class="controls input-block-level input-xxlarge">
-      <%= f.text_area :description, :size => "150x20", :placeholder => "Lets your thoughts flow..." %>
+  <div class="col-md-10">
+    <%= form_for @brainstorm, :html => {:id => "brainstorm-form"} do |f| %>
+      <!-- <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :title, :class => 'form_control', :placeholder => "Title", :size => 150 %>
+        </div>
+      </div> -->
+      <div class="control-group">
+        <div class="controls input-block-level input-xxlarge">
+          <%= f.text_area :description, :size => "150x20", :placeholder => "Let your thoughts flow...", id: "textbox-input", onselect: "grabTextSelection()", style: "width: 100%;" %>
+          <!--
+            , class: "wysihtml5"
+          -->
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-1">  
+    <div style="display:none;">
+      <div id="item-form">
+       <%= form_for(@item, :remote => true) do |f| %>
+         <%= f.text_area :description, :size => "200x2" %>
+       <% end %> 
+      </div>
     </div>
+    <!--
+      Side bar
+    -->
+    <div class="block">
+     <a href="javascript:void(0)" class="form-submit hovicon small effect-1 sub-a" onclick="$('#item-form').submit(); return false;">
+       C
+     </a>
+     <br/>
+     <a href="javascript:void(0)" class="form-submit hovicon small effect-1 sub-a" onclick="$('#brainstorm-form').submit();">
+       S
+     </a> 
+    </div>
+
+
   </div>
 </div>
 
-<div class="span2">
-    <a href="javascript:void(0)" class="form-submit" onclick="$(this).closest('form').submit();">
-      <i class="glyphicon glyphicon-ok" style="font-size:36px;"></i>
-    </a>
-    <br>
-    <a href="<%= brainstorms_path %>">
-      <i class="glyphicon glyphicon-remove" style="font-size:36px;"></i>
-    </a>
 
-</div>
-<% end %>
+
+<script type="text/javascript">
+function grabTextSelection() {
+    $("[name='item[description]").text($('#textbox-input').selection());
+}
+
+$(document).ready(function(){
+
+  $('.wysihtml5').each(function(i, elem) {
+    $(elem).wysihtml5();
+  });
+
+})
+</script>
+
+<!--
+TO DO
+
+Items:
+JavaScript
+X - Grab text
+  - Clear text Selection
+  - Notify of created item
+-->

@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-Dothedue::Application.config.session_store :cookie_store, key: '_dothedue_session'
+JugOfWater::Application.config.session_store :cookie_store, key: '_jugofwater_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# Dothedue::Application.config.session_store :active_record_store
+# JugOfWater::Application.config.session_store :active_record_store

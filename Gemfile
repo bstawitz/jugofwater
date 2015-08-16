@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.1.3'
 gem 'rails', '3.2.16'
 
 
@@ -9,6 +9,9 @@ gem 'rails', '3.2.16'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'less-rails-bootstrap'
 gem 'therubyracer'
+gem 'font-awesome-less'
+gem 'rename'
+gem 'bootstrap-wysihtml5-rails'
 
 group :development do
   gem 'sqlite3'

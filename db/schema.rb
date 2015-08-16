@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140611211604) do
+ActiveRecord::Schema.define(:version => 20150602140419) do
 
   create_table "brainstorms", :force => true do |t|
     t.string   "title"
@@ -20,12 +20,20 @@ ActiveRecord::Schema.define(:version => 20140611211604) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "items", :force => true do |t|
+  create_table "categories", :force => true do |t|
     t.string   "name"
+    t.text     "desc"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "items", :force => true do |t|
     t.string   "description"
     t.datetime "due_date"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "brainstorm_id"
+    t.string   "category_id"
   end
 
 end

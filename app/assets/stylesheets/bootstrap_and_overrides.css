@@ -4,27 +4,95 @@
   Use Font Awesome icons (default)
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
-  */
+*/
+
+
+/*
+  COLOR THEME
+
+  light beight  #EFECCA
+  medium beige  #E6E2AF
+  dark beige    #A7A37E
+  Light blue    #046380
+  Dark Green    #002F2F
+*/
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  background-color: none;
+  text-decoration: none;
+}
+
+* {
+  color: #002F2F;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Questrial', sans-serif;
+}
+
+.navbar-default {
+  background: none;
+  box-shadow: none;
+  border: none;
+  height: 80px;
+}
 
 body { 
-
+  background-color: #f8f7e9;
+  color: #002F2F;
 }
 
-textarea, .uneditable-input {
-  width: 75%;
+#textbox-input {
+  font-family: 'The Girl Next Door', cursive;
+  font-size: 16px;
 }
 
-textarea#brainstorm_description {
+.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append, textarea, textarea:focus {
+    border:none;
+    background: #EFECCA none repeat scroll 0% 0%;
+    box-shadow: 4px 4px 5px rgba(0, 47, 47, 0.07);
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   -moz-transition: none;
+   -webkit-transition: none;
+   font: 'The Girl Next Door', cursive;
+   color: #002F2F;
+   padding:20px;   
+   line-height: 22px;
+}
+
+.thumbnail {
+  min-height: 370px;
   border: none;
-}
-input#brainstorm_title {
-  border: none;
-  border-bottom: 1px dashed black;
-  line-height: 40px;
-  font-size:30px;
-  height:40px;
+  background: #EFECCA;
+  box-shadow: 4px 4px 5px rgba( 0, 47, 47, 0.07);
+  padding: 0px 15px;
 }
 
-.navbar .nav {
-  float: right;
+.thumbnail p {
+  font-size: 12px;
+  line-height:18px;
+}
+.thumbnail h3 {
+  font-size: 18px;
+}
+
+
+.round-border i
+{
+  display: inline-block;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  -moz-box-shadow: 0px 0px 2px #888;
+  -webkit-box-shadow: 0px 0px 2px #888;
+  box-shadow: 0px 0px 2px #888;
+  border: 1px solid #888;
+  padding: 7px;
+  font-size: 22px;
+  margin-bottom: 5px;
 }

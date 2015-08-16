@@ -2,7 +2,7 @@ class BrainstormsController < ApplicationController
   # GET /brainstorms
   # GET /brainstorms.json
   def index
-    @brainstorms = Brainstorm.all
+    @brainstorms = Brainstorm.order("created_at DESC").all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +25,7 @@ class BrainstormsController < ApplicationController
   # GET /brainstorms/new.json
   def new
     @brainstorm = Brainstorm.new
+    @item = Item.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class BrainstormsController < ApplicationController
   # GET /brainstorms/1/edit
   def edit
     @brainstorm = Brainstorm.find(params[:id])
+    @item = Item.new
   end
 
   # POST /brainstorms

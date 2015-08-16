@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Dothedue::Application.load_tasks
+JugOfWater::Application.load_tasks
