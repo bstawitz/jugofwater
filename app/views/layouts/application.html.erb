@@ -30,6 +30,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <% unless notice.nil? || alert.nil? %>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,7 +49,7 @@
       </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="radial-menu">
-        <a href="#" class="menu-item1 hovicon small effect-1 sub-a">Q</a>
+        <%= link_to "Q", destroy_user_session_path, method: :delete, class: "menu-item1 hovicon small effect-1 sub-a" %>
         <a href="#" class="menu-item2 hovicon small effect-1 sub-a">P</a>
         <a href="<%= items_path %>" class="menu-item3 hovicon small effect-1 sub-a">S</a>
         <a href="<%= brainstorms_path %>" class="menu-item4 hovicon small effect-1 sub-a">W</a>

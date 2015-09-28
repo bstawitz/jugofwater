@@ -1,8 +1,9 @@
 class BrainstormsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /brainstorms
   # GET /brainstorms.json
   def index
-    @brainstorms = Brainstorm.order("created_at DESC").all
+    @brainstorms = current_user.brainstorms.order("created_at DESC").all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,7 @@ class BrainstormsController < ApplicationController
   # GET /brainstorms/1
   # GET /brainstorms/1.json
   def show
-    @brainstorm = Brainstorm.find(params[:id])
+    @brainstorm = current_user.brainstorms.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

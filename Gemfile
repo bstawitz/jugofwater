@@ -12,6 +12,7 @@ gem 'therubyracer'
 gem 'font-awesome-less'
 gem 'rename'
 gem 'bootstrap-wysihtml5-rails'
+gem 'devise'
 
 group :development do
   gem 'sqlite3'
