@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
   background: none;
   box-shadow: none;
   border: none;
-  height: 80px;
+  height: 0px;
 }
 
 body { 
@@ -46,12 +46,12 @@ body {
   color: #002F2F;
 }
 
-#textbox-input {
-  font-family: 'The Girl Next Door', cursive;
+.new-brainstorm-input {
+  font-family: 'Gloria Hallelujah', cursive;
   font-size: 16px;
 }
 
-.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append, textarea, textarea:focus {
+.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append, textarea, textarea:focus, .form_control, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
     border:none;
     background: #EFECCA none repeat scroll 0% 0%;
     box-shadow: 4px 4px 5px rgba(0, 47, 47, 0.07);
@@ -59,7 +59,7 @@ body {
    -moz-box-shadow: none;
    -moz-transition: none;
    -webkit-transition: none;
-   font: 'The Girl Next Door', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
    color: #002F2F;
    padding:20px;   
    line-height: 22px;

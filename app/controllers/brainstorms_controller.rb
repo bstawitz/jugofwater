@@ -43,8 +43,8 @@ class BrainstormsController < ApplicationController
   # POST /brainstorms
   # POST /brainstorms.json
   def create
-    @brainstorm = Brainstorm.new(params[:brainstorm])
-
+    @brainstorm = current_user.brainstorms.new(params[:brainstorm])
+    
     respond_to do |format|
       if @brainstorm.save
         format.html { redirect_to brainstorms_path, notice: 'Brainstorm was successfully created.' }
