@@ -44,6 +44,7 @@ h1, h2, h3, h4 {
 body { 
   background-color: #f8f7e9;
   color: #002F2F;
+  padding-top: 0px;
 }
 
 .new-brainstorm-input {
@@ -66,7 +67,7 @@ body {
 }
 
 .thumbnail {
-  min-height: 370px;
+  min-height: 390px;
   border: none;
   background: #EFECCA;
   box-shadow: 4px 4px 5px rgba( 0, 47, 47, 0.07);
