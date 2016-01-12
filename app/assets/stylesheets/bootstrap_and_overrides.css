@@ -65,6 +65,18 @@ body {
   border-color: #A7A37E;
 }
 
+.btn-info {
+  color: white;
+  background-color: #046380;
+  border-color: #002F2F;
+}
+
+.btn-info:hover {
+  color: white;
+  background-color: #EFECCA;
+  border-color: #002F2F;
+}
+
 .form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append, textarea, textarea:focus, .form_control, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
     border:none;
     background: #EFECCA none repeat scroll 0% 0%;
@@ -126,7 +138,7 @@ body {
 }
 
 .marketing {
-  padding-top: 30px;
+  padding-top: 50px;
 
   z-index: 99;
 }
@@ -137,9 +149,10 @@ body {
 background-color: rgba(71, 71, 71, 0.59);
 padding: 110px 0 32px;
 min-height: 496px; 
+text-align:center;
 /* Incase of overlay problems just increase the min-height*/
 }
-.video-section h1, .video-section h3{
+.video-section h1, .video-section h3, .video-section p {
 text-align:center;
 color:#fff;
 }
@@ -156,6 +169,19 @@ font-size: 25px;
 line-height: 40px;
 font-weight:lighter;
 margin: 0px auto 15px;
+}
+
+.video-section p{
+  font-size:50px;
+  margin: 40px auto 0px;
+  text-shadow: 1px 1px 1px #000;
+  -webkit-text-shadow: 1px 1px 1px #000;
+  -moz-text-shadow: 1px 1px 1px #000;
+  font-family: 'Gloria Hallelujah', cursive;
+  border-bottom: 2px dotted white;
+  width: 150px;
+  text-align: center;
+  line-height: 55px;
 }
 .video-section .buttonBar{display:none;}
 .player {font-size: 1px;}
