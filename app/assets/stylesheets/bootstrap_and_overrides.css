@@ -128,7 +128,7 @@ body {
   text-align: center;
   height: 140px;
 }
-.icon-circle-background p {
+.marketing .icon-circle-background p {
   text-decoration: none;
   color: #046380;
   font-family: "Pacifico";
@@ -139,8 +139,12 @@ body {
 
 .marketing {
   padding-top: 50px;
-
   z-index: 99;
+}
+
+.marketing p {
+  font-family: "Questrial";
+  font-size: 18px;
 }
 
 /* stuff for video header */
@@ -152,7 +156,7 @@ min-height: 496px;
 text-align:center;
 /* Incase of overlay problems just increase the min-height*/
 }
-.video-section h1, .video-section h3, .video-section p {
+.video-section h1, .video-section h2, .video-section p {
 text-align:center;
 color:#fff;
 }
@@ -164,7 +168,7 @@ text-shadow: 1px 1px 1px #000;
 -webkit-text-shadow: 1px 1px 1px #000;
 -moz-text-shadow: 1px 1px 1px #000;
 }
-.video-section h3{
+.video-section h2{
 font-size: 25px;
 line-height: 40px;
 font-weight:lighter;

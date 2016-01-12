@@ -12,7 +12,12 @@ body {
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
+  
 }
+.form-signin .form-signin-heading h2 {
+font-family: arial;
+}
+
 .form-signin .checkbox {
   font-weight: normal;
 }
