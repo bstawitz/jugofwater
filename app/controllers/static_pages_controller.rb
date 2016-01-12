@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  layout false
   def index
+    @front_page = true
   end
 end
