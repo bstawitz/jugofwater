@@ -13,8 +13,8 @@
   light beight  #EFECCA
   medium beige  #E6E2AF
   dark beige    #A7A37E
-  Light blue    #046380
   Dark Green    #002F2F
+  Dark blue     #046380
 */
 
 a {
@@ -145,6 +145,7 @@ body {
 .marketing p {
   font-family: "Questrial";
   font-size: 18px;
+  color: #002F2F;
 }
 
 /* stuff for video header */

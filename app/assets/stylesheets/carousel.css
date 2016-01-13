@@ -83,13 +83,15 @@ body {
 
 .featurette-divider {
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  border-top: 1px dashed #046380;
 }
 
 /* Thin out the marketing headings */
 .featurette-heading {
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.25;
   letter-spacing: -1px;
+
 }
 
 
