@@ -4,7 +4,7 @@
       <div class="collapse" id="brainstorm_title_input">
         <div class="control-group">
           <div class="controls input-block-level input-xxlarge">
-            <%= f.text_field :title, :class => 'form_control', class: "new-brainstorm-input", :placeholder => "Title", style: "width: 100%; font-size: 18px; height: 60px; " %>
+            <%= f.text_field :title, :class => 'form_control', class: "new-brainstorm-input", :placeholder => "Title", style: "width: 100%; font-size: 18px; height: 60px;" %>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
       Side bar
     -->
     <div class="block">
-      <a class="hovicon small effect-1 sub-a" role="button" data-toggle="collapse" href="#brainstorm_title_input" aria-expanded="false" aria-controls="collapseExample" title="Title">
+      <a class="hovicon small effect-1 sub-a" role="button" data-toggle="collapse" href="#brainstorm_title_input" aria-expanded="false" aria-controls="collapseExample" title="Title" onclick="$('#brainstorm_title').focus();">
         T
       </a>
     </div>
