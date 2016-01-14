@@ -21,13 +21,7 @@
   </div>
 
   <div class="col-md-1">  
-    <div style="display:none;">
-      <div id="item-form">
-       <%= form_for(@item, :remote => true) do |f| %>
-         <%= f.text_area :description, :size => "200x2" %>
-       <% end %> 
-      </div>
-    </div>
+
     <!--
       Side bar
     -->
@@ -42,8 +36,10 @@
       </a>
     </div>    
     <div class="block">
-     <a href="javascript:void(0)" class="form-submit hovicon small effect-1 sub-a" onclick="$('#item-form').submit(); return false;" title="Clipping">
-       C
+    <%= form_for(@item, remote: true, :html => { :onsubmit => "getSelectionText()", :id => "item-form" } ) do |f| %>
+      <%= f.text_field :description, :style => "display: none;" %>
+      <%= f.submit "C", class: "hovicon small effect-1 sub-a" %>
+    <% end %>
      </a>
      <br/>
      <a href="javascript:void(0)" class="form-submit hovicon small effect-1 sub-a" onclick="$('#brainstorm-form').submit();" title="Save">
@@ -58,19 +54,16 @@
 
 
 <script type="text/javascript">
-function grabTextSelection() {
-    $("[name='item[description]").text($('#textbox-input').selection());
+function getSelectionText() {
+  var text = ($('#brainstorm_description').selection());
+  document.getElementById('item_description').value = text;
+  $('#textarea').focus();
 }
 
 $(document).ready(function(){
-
   $('.wysihtml5').each(function(i, elem) {
     $(elem).wysihtml5();
-    
   });
-  
-
-  
 })
 </script>
 
