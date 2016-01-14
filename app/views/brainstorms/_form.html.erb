@@ -36,7 +36,7 @@
       </a>
     </div>    
     <div class="block">
-    <%= form_for(@item, remote: true, :html => { :onsubmit => "getSelectionText()", :id => "item-form" } ) do |f| %>
+    <%= form_for(@item, remote: true, :html => { :onsubmit => "getSelectionText()" } ) do |f| %>
       <%= f.text_field :description, :style => "display: none;" %>
       <%= f.submit "C", class: "hovicon small effect-1 sub-a" %>
     <% end %>

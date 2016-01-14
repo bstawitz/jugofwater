@@ -1,8 +1,9 @@
 class ItemsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = current_user.items.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,7 @@ class ItemsController < ApplicationController
   # GET /items/new
   # GET /items/new.json
   def new
-    @item = Item.new
+    @item = current_user.items.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +41,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(params[:item])
+    @item = current_user.items.new(params[:item])
 
     respond_to do |format|
       if @item.save

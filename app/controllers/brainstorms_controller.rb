@@ -25,7 +25,7 @@ class BrainstormsController < ApplicationController
   # GET /brainstorms/new
   # GET /brainstorms/new.json
   def new
-    @brainstorm = Brainstorm.new
+    @brainstorm = current_user.brainstorms.new
     @item = Item.new
 
     respond_to do |format|
@@ -36,7 +36,7 @@ class BrainstormsController < ApplicationController
 
   # GET /brainstorms/1/edit
   def edit
-    @brainstorm = Brainstorm.find(params[:id])
+    @brainstorm = current_user.brainstorms.find(params[:id])
     @item = Item.new
   end
 
