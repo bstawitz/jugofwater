@@ -13,6 +13,7 @@ gem 'font-awesome-less'
 gem 'rename'
 gem 'bootstrap-wysihtml5-rails'
 gem 'devise'
+gem 'rest_in_place'
 
 group :development do
   gem 'sqlite3'

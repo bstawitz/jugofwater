@@ -9,7 +9,12 @@
         <div class="thumbnail" style="height: auto; min-height: 50px;">
           <div class="caption">
             <h5><%= link_to "", item_path(item), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'glyphicon glyphicon-trash pull-right' %>
-            <%= link_to truncate(item.description, length: 120), edit_item_path(item), title: (item.created_at.to_formatted_s(:short)) %></h5><br/>
+              <div id="<%= dom_id item %>">
+                <span class="rest-in-place" data-formtype="textarea" data-attribute="description"> 
+                  <%= item.description %>
+                </span> 
+              </div>
+            </h5><br/>
           </div>
         </div>
       </div>

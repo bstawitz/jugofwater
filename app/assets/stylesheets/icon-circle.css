@@ -18,6 +18,12 @@
     font-family: "Pacifico";
 }
 
+.hovicon .btn-link {
+  color: inherit;
+  text-decoration: none;
+  padding-top: 0px;
+}
+
 .hovicon.small {
     font-size: 20px;
     line-height:45px;

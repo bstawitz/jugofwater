@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require rest_in_place
 //= require twitter/bootstrap
 //= require_tree .
 //= require bootstrap-wysihtml5

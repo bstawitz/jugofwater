@@ -38,10 +38,13 @@
     <div class="block">
     <%= form_for(@item, remote: true, :html => { :onsubmit => "getSelectionText()" } ) do |f| %>
       <%= f.text_field :description, :style => "display: none;" %>
-      <%= f.submit "C", class: "hovicon small effect-1 sub-a" %>
+      <span class="hovicon small effect-1 sub-a">
+      <%= f.submit "C", class: "btn-link" %>
+      </span>
     <% end %>
      </a>
-     <br/>
+     </div>
+     <div class="block">
      <a href="javascript:void(0)" class="form-submit hovicon small effect-1 sub-a" onclick="$('#brainstorm-form').submit();" title="Save">
        S
      </a> 
