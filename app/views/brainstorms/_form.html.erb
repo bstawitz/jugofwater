@@ -1,3 +1,4 @@
+<center><div id="result"></div></center>
 <div class="row">
   <div class="col-md-11">
     <%= form_for @brainstorm, :html => {:id => "brainstorm-form"} do |f| %>
@@ -39,7 +40,7 @@
     <%= form_for(@item, remote: true, :html => { :onsubmit => "getSelectionText()" } ) do |f| %>
       <%= f.text_field :description, :style => "display: none;" %>
       <span class="hovicon small effect-1 sub-a">
-      <%= f.submit "C", class: "btn-link" %>
+      <%= f.submit "C", class: "btn-link", id: "item-creation-btn" %>
       </span>
     <% end %>
      </a>
@@ -61,13 +62,37 @@ function getSelectionText() {
   var text = ($('#brainstorm_description').selection());
   document.getElementById('item_description').value = text;
   $('#textarea').focus();
+  
 }
 
 $(document).ready(function(){
-  $('.wysihtml5').each(function(i, elem) {
-    $(elem).wysihtml5();
+  $("#item-creation-btn").click( function() {
+    var text = ($('#brainstorm_description').selection());
+    //$.post( $("#updateunit").attr("action"), 
+    // $("#updateunit :input").serializeArray(),function(info){ 
+      $("#result").html('<div class="alert btn-default"><button type="button" class="close">×</button>Clipped: ' + text +'!</div>');
+      window.setTimeout(function() {
+        $(".alert").fadeTo(300, 0).slideUp(300, function(){
+          $(this).remove(); 
+        });
+      }, 5000);
+      $('.alert .close').on("click", function(e){
+        $(this).parent().fadeTo(300, 0).slideUp(300);
+      });
+      //});
+    });
+       
+    $("#updateunit").submit( function() {
+      return false;   
+    });
   });
-})
+  function clearInput() {
+    $("#updateunit :input").each( function() {
+      $(this).val('');
+    });
+  }  
+
+
 </script>
 
 <!--
