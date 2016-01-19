@@ -148,6 +148,15 @@ body {
   color: #002F2F;
 }
 
+.letter-icon {
+  text-decoration: none;
+  color: #A7A37E;
+  font-family: inherit;
+}
+.letter-icon:hover a {
+    color: #046380;
+}
+
 /* stuff for video header */
 
 .video-section .pattern-overlay {

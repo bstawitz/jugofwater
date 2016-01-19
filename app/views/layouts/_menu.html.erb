@@ -9,11 +9,11 @@
       </button>
     </div>
   <div class="collapse navbar-collapse" id="navbar">
-    <ul class="nav navbar-nav hidden-sm hidden-lg">
-      <li><%= link_to "Q", destroy_user_session_path, method: :delete, class: "menu-item1 hovicon small effect-1 sub-a", title: "Quit" %></li>
-      <li><a href="<%= edit_user_registration_path %>" class="menu-item2 hovicon small effect-1 sub-a" title="Profile">P</a></li>
-      <li><a href="<%= items_path %>" class="menu-item3 hovicon small effect-1 sub-a" title="Sort">S</a></li>
-      <li><a href="<%= brainstorms_path %>" class="menu-item4 hovicon small effect-1 sub-a" title="Write">W</a></li>
+    <ul class="nav navbar-nav navbar-right hidden-sm hidden-lg">
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete, title: "Quit" %></li>
+      <li><a href="<%= edit_user_registration_path %>" title="Profile">Profile</a></li>
+      <li><a href="<%= items_path %>" title="Sort">S</a></li>
+      <li><a href="<%= brainstorms_path %>" title="Write">W</a></li>
     </ul>
   </div>
   <div class="hidden-xs">
