@@ -1,20 +1,20 @@
 /*
-  =require twitter-bootstrap-static/bootstrap
+=require twitter-bootstrap-static/bootstrap
 
-  Use Font Awesome icons (default)
-  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
-  =require twitter-bootstrap-static/fontawesome
+Use Font Awesome icons (default)
+To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+=require twitter-bootstrap-static/fontawesome
 */
 
 
 /*
-  COLOR THEME
+COLOR THEME
 
-  light beight  #EFECCA
-  medium beige  #E6E2AF
-  dark beige    #A7A37E
-  Dark Green    #002F2F
-  Dark blue     #046380
+light beight  #EFECCA
+medium beige  #E6E2AF
+dark beige    #A7A37E
+Dark Green    #002F2F
+Dark blue     #046380
 */
 
 a {
@@ -78,17 +78,17 @@ body {
 }
 
 .form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append, textarea, textarea:focus, .form_control, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-    border:none;
-    background: #EFECCA none repeat scroll 0% 0%;
-    box-shadow: 4px 4px 5px rgba(0, 47, 47, 0.07);
-   -webkit-box-shadow: none;
-   -moz-box-shadow: none;
-   -moz-transition: none;
-   -webkit-transition: none;
-    font-family: 'Gloria Hallelujah', cursive;
-   color: #002F2F;
-   padding:20px;   
-   line-height: 22px;
+  border:none;
+  background: #EFECCA none repeat scroll 0% 0%;
+  box-shadow: 4px 4px 5px rgba(0, 47, 47, 0.07);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #002F2F;
+  padding:20px;   
+  line-height: 22px;
 }
 
 .thumbnail {
@@ -151,29 +151,29 @@ body {
 /* stuff for video header */
 
 .video-section .pattern-overlay {
-background-color: rgba(4, 99, 128, 0.59);
-padding: 110px 0 32px;
-min-height: 496px; 
-text-align:center;
-/* Incase of overlay problems just increase the min-height*/
+  background-color: rgba(4, 99, 128, 0.59);
+  padding: 110px 0 32px;
+  min-height: 496px; 
+  text-align:center;
+  /* Incase of overlay problems just increase the min-height*/
 }
 .video-section h1, .video-section h2, .video-section p {
-text-align:center;
-color:#fff;
+  text-align:center;
+  color:#fff;
 }
 .video-section h1{
-font-size:70px;
-text-transform: uppercase;
-margin: 40px auto 0px;
-text-shadow: 1px 1px 1px #000;
--webkit-text-shadow: 1px 1px 1px #000;
--moz-text-shadow: 1px 1px 1px #000;
+  font-size:70px;
+  text-transform: uppercase;
+  margin: 40px auto 0px;
+  text-shadow: 1px 1px 1px #000;
+  -webkit-text-shadow: 1px 1px 1px #000;
+  -moz-text-shadow: 1px 1px 1px #000;
 }
 .video-section h2{
-font-size: 25px;
-line-height: 40px;
-font-weight:lighter;
-margin: 0px auto 15px;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight:lighter;
+  margin: 0px auto 15px;
 }
 
 .video-section p{
@@ -190,3 +190,11 @@ margin: 0px auto 15px;
 }
 .video-section .buttonBar{display:none;}
 .player {font-size: 1px;}
+
+@media (max-width : 768px) { 
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }  
+}
+ 
