@@ -10,7 +10,7 @@
         <h2>General</h2>
         <% @items.each do |item| %>
 
-        <h5><%= link_to "", item_path(item), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'glyphicon glyphicon-trash pull-right' %>
+        <h5><%= link_to "X", item_path(item), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'pull-right' %>
           <!--
             https://github.com/janv/rest_in_place
             -->
